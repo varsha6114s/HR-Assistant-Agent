@@ -1,5 +1,7 @@
 # Environment variables
 .env
+*.env
+!.env.example
 
 # Python
 __pycache__/
@@ -7,20 +9,35 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
-venv/
-ENV/
+*.egg-info/
+dist/
+build/
 
-# Vector DB
-faiss_index/
-*.db
+# Virtual Environment
+venv/
+env/
+ENV/
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # OS
 .DS_Store
 Thumbs.db
+
+# FAISS Index
+faiss_index/
+
+# Streamlit
+.streamlit/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak

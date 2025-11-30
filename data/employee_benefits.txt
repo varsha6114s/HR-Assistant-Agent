@@ -1,0 +1,221 @@
+# Employee Benefits Guide
+
+## Overview
+This guide provides detailed information about all employee benefits offered by the company.
+
+## Health and Wellness
+
+### Medical Insurance
+- **Coverage Amount**: ₹5,00,000 per family per year
+- **Family Definition**: Employee + Spouse + 2 dependent children
+- **Network Hospitals**: 5000+ hospitals across India
+- **Cashless Facility**: Available at all network hospitals
+- **Reimbursement**: Claims processed within 15 days
+- **Pre-existing Conditions**: Covered after 2 years
+- **Maternity Coverage**: ₹75,000 per delivery
+- **Annual Health Checkup**: Free for employee and spouse
+
+### Dental and Vision
+- **Dental Coverage**: ₹25,000 per year
+- **Vision Coverage**: ₹15,000 per year (glasses/lenses)
+- **Preventive Care**: 100% covered
+
+### Mental Health Support
+- **Counseling Sessions**: 6 free sessions per year
+- **24/7 Helpline**: Available for all employees
+- **Stress Management**: Workshops conducted quarterly
+- **Meditation App**: Free subscription to Headspace
+
+### Gym Membership
+- **Reimbursement**: Up to ₹2,000 per month
+- **Corporate Tie-ups**: Discounted rates at partner gyms
+- **Yoga Classes**: Free weekly sessions at office
+
+## Financial Benefits
+
+### Provident Fund (PF)
+- **Employee Contribution**: 12% of basic salary
+- **Employer Contribution**: 12% of basic salary
+- **Voluntary PF**: Additional contribution allowed
+- **Interest Rate**: As per government norms (~8.15%)
+
+### Gratuity
+- **Eligibility**: After 5 years of service
+- **Calculation**: 15 days salary for each completed year
+- **Maximum**: As per Payment of Gratuity Act
+
+### Employee Stock Options (ESOP)
+- **Eligibility**: After 1 year of service
+- **Vesting Period**: 4 years (25% per year)
+- **Exercise Window**: 10 years from grant date
+
+### Performance Bonus
+- **Annual Bonus**: Up to 20% of annual CTC
+- **Criteria**: Individual performance + Company performance
+- **Payment**: April of following year
+- **Pro-rated**: For employees joining mid-year
+
+### Referral Bonus
+- **Amount**: ₹25,000 per successful referral
+- **Payment**: After candidate completes 6 months
+- **Unlimited**: No cap on number of referrals
+
+## Work-Life Balance
+
+### Flexible Working Hours
+- **Core Hours**: 10 AM to 4 PM (mandatory)
+- **Flexible Start**: 8 AM to 10 AM
+- **Flexible End**: 5 PM to 7 PM
+- **No Fixed Desk**: Hot-desking available
+
+### Work From Home
+- **Frequency**: 2 days per week
+- **Approval**: Manager discretion
+- **Full Remote**: Available for specific roles
+- **Equipment**: Laptop, monitor, accessories provided
+
+### Sabbatical Leave
+- **Eligibility**: After 5 years of service
+- **Duration**: Up to 3 months unpaid
+- **Frequency**: Once every 5 years
+- **Approval**: Requires senior management approval
+
+## Learning and Development
+
+### Training Budget
+- **Annual Allocation**: ₹50,000 per employee
+- **Usage**: Online courses, workshops, conferences
+- **Approval**: Manager + HR approval required
+
+### Certification Support
+- **Exam Fees**: 100% reimbursed on passing
+- **Study Leave**: 5 days per year for exam preparation
+- **Popular Certifications**: AWS, Azure, PMP, Scrum Master
+
+### Conference Attendance
+- **Frequency**: 1-2 conferences per year
+- **Coverage**: Registration, travel, accommodation
+- **Knowledge Sharing**: Presentation required post-conference
+
+### Online Learning Platforms
+- **Subscriptions Provided**: 
+  - Coursera for Business
+  - Udemy Business
+  - LinkedIn Learning
+  - Pluralsight
+
+### Mentorship Program
+- **Internal Mentors**: Assigned to all new joiners
+- **External Mentors**: Available for senior roles
+- **Duration**: 6-12 months
+
+## Family Benefits
+
+### Parental Leave
+- **Maternity Leave**: 26 weeks paid
+- **Paternity Leave**: 2 weeks paid
+- **Adoption Leave**: 12 weeks paid
+- **Extended Leave**: 4 weeks unpaid if needed
+
+### Childcare Support
+- **Daycare Reimbursement**: ₹5,000 per month
+- **Creche Facility**: Available at head office
+- **Flexible Hours**: For new parents (first 6 months)
+
+### Education Assistance
+- **Children's Education**: ₹50,000 per child per year
+- **Eligibility**: After 3 years of service
+- **Coverage**: School fees, books, uniforms
+
+## Transportation and Meals
+
+### Transportation
+- **Company Shuttle**: Free from major locations
+- **Fuel Reimbursement**: ₹3,000 per month for own vehicle
+- **Parking**: Free parking at all offices
+- **EV Charging**: Free charging stations available
+
+### Meals
+- **Subsidized Cafeteria**: Breakfast and lunch
+- **Meal Vouchers**: ₹100 per day
+- **Free Snacks**: Tea, coffee, fruits throughout the day
+- **Dinner**: Free for employees working late (post 8 PM)
+
+## Additional Perks
+
+### Mobile and Internet
+- **Mobile Reimbursement**: ₹1,500 per month
+- **Broadband**: ₹1,000 per month for WFH employees
+
+### Relocation Support
+- **Relocation Allowance**: Up to ₹1,00,000
+- **Temporary Accommodation**: 30 days hotel stay
+- **Packers and Movers**: Company arranged
+
+### Loan Facilities
+- **Emergency Loan**: Up to 3 months salary
+- **Interest**: 0% interest
+- **Repayment**: Through salary deduction (max 12 months)
+
+### Wellness Programs
+- **Annual Sports Day**: Team building activities
+- **Yoga and Meditation**: Weekly sessions
+- **Health Talks**: Monthly sessions with doctors
+- **Ergonomic Assessment**: Free workstation setup
+
+### Recognition and Rewards
+- **Employee of the Month**: ₹10,000 + Certificate
+- **Spot Awards**: ₹5,000 for exceptional work
+- **Long Service Awards**: At 5, 10, 15 years
+- **Innovation Awards**: Quarterly recognition
+
+## Insurance Coverage
+
+### Life Insurance
+- **Coverage**: 4x annual CTC
+- **Beneficiary**: Nominee chosen by employee
+- **Premium**: Fully paid by company
+
+### Accidental Insurance
+- **Coverage**: 4x annual CTC
+- **Permanent Disability**: 100% coverage
+- **Partial Disability**: Pro-rated coverage
+
+### Travel Insurance
+- **Business Travel**: Full coverage
+- **Personal Travel**: Discounted rates available
+
+## Retirement Benefits
+
+### National Pension Scheme (NPS)
+- **Company Contribution**: 10% of basic salary
+- **Employee Contribution**: Optional
+- **Tax Benefits**: Under Section 80C and 80CCD
+
+### Superannuation
+- **Eligibility**: After 3 years of service
+- **Contribution**: 15% of basic salary
+- **Vesting**: Immediate
+
+## How to Avail Benefits
+
+### Medical Claims
+1. Visit network hospital with insurance card
+2. For reimbursement, submit bills within 30 days
+3. Claims processed within 15 working days
+
+### Leave Application
+1. Apply through HRMS portal
+2. Manager approval required
+3. HR notification automatic
+
+### Reimbursements
+1. Submit expense report with bills
+2. Manager approval
+3. Payment in next salary cycle
+
+### Contact Information
+- **HR Helpdesk**: hr@company.com
+- **Benefits Team**: benefits@company.com
+- **Phone**: +91-80-1234-5678
+- **Portal**: hrms.company.com

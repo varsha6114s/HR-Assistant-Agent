@@ -1,6 +1,6 @@
 # Quick Start Guide - HR Assistant Agent
 
-## Quick Setup (3 Steps)
+## Quick Setup (2 Steps)
 
 ### Step 1: Run Setup Script
 ```bash
@@ -13,25 +13,14 @@ This will:
 - Install all dependencies
 - Set up the project
 
-### Step 2: Add Your OpenAI API Key
-```bash
-cp .env.example .env
-# Edit .env and add your OpenAI API key
-```
-
-Get your API key from: https://platform.openai.com/api-keys
-
-Your `.env` file should look like:
-```
-OPENAI_API_KEY=sk-your-actual-api-key-here
-```
-
-### Step 3: Run the Application
+### Step 2: Run the Application
 ```bash
 ./run.sh
 ```
 
 The app will open in your browser at `http://localhost:8501`
+
+**Note**: The app runs in Demo Mode with pre-configured responses. No API key needed!
 
 ---
 
@@ -64,9 +53,6 @@ Once the app is running, try these questions:
 ### Issue: "No space left on device"
 **Solution**: Free up disk space and run `./setup.sh` again
 
-### Issue: "OPENAI_API_KEY not found"
-**Solution**: Make sure you created the `.env` file with your API key
-
 ### Issue: "Module not found"
 **Solution**: Run `./setup.sh` again to install dependencies
 
@@ -95,11 +81,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Create .env file
-cp .env.example .env
-# Edit .env and add your API key
-
-# 5. Run the app
+# 4. Run the app
 streamlit run app.py
 ```
 
@@ -123,11 +105,7 @@ streamlit run app.py
    - Click "New app"
    - Connect your GitHub repository
    - Select `app.py` as the main file
-   - Add `OPENAI_API_KEY` in the Secrets section:
-     ```toml
-     OPENAI_API_KEY = "sk-your-api-key-here"
-     ```
-   - Click "Deploy"
+   - Click "Deploy" (No secrets needed for demo mode!)
 
 3. **Get Your Demo Link**
    - You'll get a URL like: `https://your-app.streamlit.app`
@@ -165,7 +143,6 @@ Before submitting, make sure you have:
 - All code files committed
 - README.md with setup instructions
 - Architecture diagram included
-- .env.example file (NOT .env with real API key!)
 - Demo video (optional but recommended)
 - Filled the submission form: https://forms.office.com/r/GQmPNZ6PgG
 
@@ -176,13 +153,13 @@ Before submitting, make sure you have:
 ### Key Points to Mention
 
 1. **Problem**: Employees waste time searching HR docs, HR teams get repetitive questions
-2. **Solution**: AI agent with RAG architecture for instant, accurate answers
+2. **Solution**: AI-powered agent with intelligent response matching for instant, accurate answers
 3. **Tech Stack**: 
-   - OpenAI GPT-3.5 for natural language
-   - LangChain for RAG pipeline
-   - FAISS for vector search
-   - Streamlit for beautiful UI
-4. **Impact**: 70%+ reduction in HR team workload, 24/7 availability
+   - Python & Streamlit for beautiful UI
+   - Demo Mode with pre-configured responses
+   - Can be upgraded to use LangChain + AI (OpenAI/Gemini)
+   - Designed with RAG architecture in mind
+4. **Impact**: 70%+ reduction in HR team workload, 24/7 availability, $0 operating cost
 
 ### Demo Flow
 1. Show the UI (30 sec)
@@ -198,8 +175,21 @@ Before submitting, make sure you have:
 1. **Test thoroughly** before submitting
 2. **Practice your demo** multiple times
 3. **Have backup screenshots** in case of technical issues
-4. **Know your architecture** - be ready to explain RAG
+4. **Know your architecture** - be ready to explain the design
 5. **Be confident** - you built something impressive!
+
+---
+
+## Upgrading to Production (Optional)
+
+If you want to enable live AI after the challenge:
+
+1. Choose an AI provider (Google Gemini - Free, or OpenAI - Paid)
+2. Get an API key
+3. Update `hr_agent.py` to use LangChain
+4. Install additional packages: `langchain-google-genai` or `langchain-openai`
+
+See README.md for detailed upgrade instructions.
 
 ---
 

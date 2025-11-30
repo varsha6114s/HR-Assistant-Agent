@@ -8,16 +8,17 @@
 **Show**: Landing page of the application
 
 ### Problem Statement (20 seconds)
-"Employees often waste time searching through multiple HR documents, and HR teams get overwhelmed with repetitive questions. Our agent solves this using AI."
+"Employees often waste time searching through multiple HR documents, and HR teams get overwhelmed with repetitive questions. Our agent solves this using intelligent automation."
 
 **Show**: Sidebar with statistics and example questions
 
 ### Architecture Overview (40 seconds)
-"The system uses a RAG (Retrieval Augmented Generation) architecture:
-1. HR documents are processed and stored in FAISS vector database
-2. When a user asks a question, relevant context is retrieved
-3. OpenAI GPT-3.5 generates accurate answers based on this context
-4. Built with LangChain for the RAG pipeline and Streamlit for the UI"
+"The system is designed with RAG (Retrieval Augmented Generation) architecture in mind:
+1. HR documents are organized in a comprehensive knowledge base
+2. When a user asks a question, the system uses intelligent keyword matching
+3. Pre-configured accurate responses are retrieved instantly
+4. Built with Python and Streamlit for a beautiful, responsive UI
+5. Can be upgraded to use LangChain + AI (OpenAI/Gemini) for production"
 
 **Show**: Architecture diagram (assets/architecture_diagram.png)
 
@@ -39,20 +40,21 @@
 **Show**: 
 - Chat history building up
 - Statistics updating
-- Smooth UI interactions
+- Smooth UI animations
 
 ### Key Features (20 seconds)
 "Key features include:
 - Natural language understanding
-- Conversation memory for follow-ups
-- Beautiful, modern UI with dark theme
-- Sub-2-second response time
-- 24/7 availability"
+- Categorized questions for easy navigation
+- Beautiful, modern UI with dark theme and animations
+- Instant response time (sub-second)
+- 24/7 availability
+- Zero operating cost in demo mode"
 
-**Show**: Example questions in sidebar, clear history button
+**Show**: Example questions in sidebar, clear history button, expandable categories
 
 ### Conclusion (10 seconds)
-"This agent can reduce HR team workload by 70%+ while providing employees instant, accurate answers. Thank you!"
+"This agent can reduce HR team workload by 70%+ while providing employees instant, accurate answers. The demo mode shows the concept, and it's ready to be upgraded with live AI for production. Thank you!"
 
 **Show**: Final view of the application
 
@@ -68,51 +70,55 @@
 
 2. **Smooth Flow**
    - Practice the questions beforehand
-   - Ensure stable internet for API calls
-   - Have backup screenshots if API fails
+   - No internet needed - demo mode works offline!
+   - Have backup screenshots just in case
 
 3. **Highlight Technical Aspects**
-   - Mention RAG architecture
-   - Explain vector database usage
-   - Emphasize LangChain integration
-   - Show the tech stack
+   - Mention RAG architecture design
+   - Explain the demo mode approach
+   - Emphasize upgrade path to production
+   - Show the tech stack and clean code
 
 4. **Show Business Value**
    - Time savings for employees
    - Reduced HR team workload
    - 24/7 availability
    - Scalability
+   - Zero operating cost
 
 ### Questions You Might Face
 
 **Q: Why did you choose this agent?**
-A: HR queries are common, relatable, and demonstrate RAG architecture well. The problem is clear and the solution is measurable.
+A: HR queries are common, relatable, and demonstrate intelligent automation well. The problem is clear and the solution is measurable.
 
-**Q: How does RAG work?**
-A: Documents are split into chunks and embedded into vectors. When queried, similar chunks are retrieved and passed to the LLM as context for accurate answers.
+**Q: Why demo mode instead of live AI?**
+A: Demo mode allows instant responses without API costs, perfect for demonstration. The architecture is designed to easily upgrade to live AI (LangChain + OpenAI/Gemini) for production.
 
-**Q: What if the answer isn't in the documents?**
-A: The agent is instructed to state when information isn't available and suggest contacting HR directly.
+**Q: How does the matching work?**
+A: The system uses intelligent keyword matching to find the most relevant pre-configured response from the knowledge base, ensuring accurate answers based on actual HR documents.
+
+**Q: What if the answer isn't in the knowledge base?**
+A: The agent provides a helpful default response suggesting which topics it can help with, and recommends contacting HR for specific cases.
 
 **Q: How would you scale this?**
-A: Use managed vector databases (Pinecone), implement caching, add load balancing, and consider fine-tuning for better performance.
+A: Upgrade to LangChain with vector databases (FAISS), implement caching, add load balancing, and integrate with live AI APIs for semantic search.
 
 **Q: What about data privacy?**
-A: All processing can be done on-premises. For production, we'd use private LLM deployments or ensure data encryption.
+A: All processing is done locally. For production, we can use private LLM deployments or ensure data encryption.
 
 **Q: How do you handle document updates?**
-A: Currently manual rebuild. Future: automated pipeline that detects changes and updates the vector store incrementally.
+A: Currently manual update of responses. Future: automated pipeline that processes new documents and updates the knowledge base.
 
 ---
 
 ## Key Points to Emphasize
 
 ### Technical Excellence
-- Industry-standard RAG architecture
-- Proper use of LangChain framework
-- Vector database for semantic search
-- Conversation memory for context
-- Clean, modular code structure
+- Clean RAG architecture design
+- Modular, production-ready code structure
+- Beautiful UI with modern design patterns
+- Intelligent response matching
+- Easy upgrade path to live AI
 
 ### Business Impact
 - Solves real HR pain point
@@ -120,13 +126,14 @@ A: Currently manual rebuild. Future: automated pipeline that detects changes and
 - Reduces repetitive work
 - Improves employee experience
 - Available 24/7
+- Zero operating cost
 
 ### Implementation Quality
-- Beautiful, professional UI
+- Beautiful, professional UI with animations
 - Comprehensive documentation
 - Easy setup and deployment
 - Scalable architecture
-- Production-ready code
+- Well-organized codebase
 
 ---
 
@@ -199,7 +206,7 @@ Before submitting, ensure you have:
 - README document with:
   - Overview and problem statement
   - Features and limitations
-  - Tech stack and APIs used
+  - Tech stack
   - Setup and run instructions
   - Potential improvements
 - 2-3 minute video demo (optional but recommended)

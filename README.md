@@ -102,10 +102,10 @@ The HR Assistant Agent follows a RAG (Retrieval Augmented Generation) architectu
 - **Keyword Matching** - Intelligent response selection
 - **In-memory Storage** - Fast conversation history
 
-### Production-Ready Stack
+### Production-Ready Stack (Optional Upgrade)
 - **LangChain** - RAG framework
 - **FAISS** - Vector database for semantic search
-- **OpenAI/Google Gemini** - LLM for response generation
+- **OpenAI or Google Gemini** - LLM for response generation
 - **Document Processing** - Text splitting and embedding
 
 ## Project Structure
@@ -228,16 +228,30 @@ CMD ["streamlit", "run", "app.py"]
 
 ## Upgrading to Production
 
-To enable full RAG with AI:
+To enable full RAG with AI (optional):
 
-1. **Get API Key**: OpenAI or Google Gemini
-2. **Update `.env`**: Add your API key
-3. **Modify `hr_agent.py`**: Switch from demo mode to LangChain implementation
-4. **Install additional packages**: 
+1. **Choose AI Provider**: 
+   - Google Gemini (Free tier available)
+   - OpenAI GPT (Paid, requires credits)
+
+2. **Get API Key**: 
+   - Gemini: https://makersuite.google.com/app/apikey
+   - OpenAI: https://platform.openai.com/api-keys
+
+3. **Update `.env`**: Add your API key
    ```bash
-   pip install langchain-openai  # For OpenAI
+   GOOGLE_API_KEY=your_key_here  # For Gemini
    # OR
-   pip install langchain-google-genai  # For Gemini
+   OPENAI_API_KEY=your_key_here  # For OpenAI
+   ```
+
+4. **Modify `hr_agent.py`**: Switch from demo mode to LangChain implementation
+
+5. **Install additional packages**: 
+   ```bash
+   pip install langchain-google-genai  # For Gemini (Recommended - Free)
+   # OR
+   pip install langchain-openai  # For OpenAI
    ```
 
 ## Documentation
@@ -296,8 +310,8 @@ Built for **Rooman AI Agent Development Challenge 2024**
 
 - **Rooman Technologies** - For organizing this amazing challenge
 - **Streamlit** - For the beautiful UI framework
-- **LangChain** - For RAG architecture inspiration
-- **OpenAI/Google** - For AI capabilities
+- **Python Community** - For excellent open-source tools
+- **LangChain** - For RAG architecture concepts
 
 ## Support
 

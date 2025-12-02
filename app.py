@@ -24,220 +24,352 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for beautiful dark theme
+# Custom CSS for stunning premium UI
 st.markdown("""
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    /* Global Styles */
+    * {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    
     /* Main theme colors */
     :root {
-        --primary-color: #6366f1;
-        --secondary-color: #8b5cf6;
-        --background-dark: #0f172a;
-        --surface-dark: #1e293b;
-        --text-primary: #f1f5f9;
-        --text-secondary: #94a3b8;
+        --primary: #6366f1;
+        --primary-dark: #4f46e5;
+        --secondary: #8b5cf6;
+        --accent: #ec4899;
+        --success: #10b981;
+        --bg-dark: #0a0e1a;
+        --bg-surface: #111827;
+        --bg-elevated: #1f2937;
+        --text-primary: #f9fafb;
+        --text-secondary: #9ca3af;
+        --glow: rgba(99, 102, 241, 0.4);
     }
     
-    /* Main container styling */
+    /* Animated gradient background */
     .main {
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        background: linear-gradient(135deg, #0a0e1a 0%, #1a1f35 50%, #0a0e1a 100%);
+        background-size: 200% 200%;
+        animation: gradientShift 15s ease infinite;
     }
     
-    /* Header styling */
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    
+    /* Glassmorphism Header */
     .header-container {
-        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-        padding: 2rem;
-        border-radius: 1rem;
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.9) 0%, rgba(139, 92, 246, 0.9) 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 3rem 2rem;
+        border-radius: 1.5rem;
         margin-bottom: 2rem;
-        box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
-        animation: fadeIn 0.5s ease-in;
+        box-shadow: 
+            0 20px 60px rgba(99, 102, 241, 0.4),
+            0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+        animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
     }
     
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
+    .header-container::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        animation: shimmer 3s infinite;
+    }
+    
+    @keyframes shimmer {
+        0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+    
+    @keyframes fadeInDown {
+        from { 
+            opacity: 0; 
+            transform: translateY(-30px) scale(0.95);
+        }
+        to { 
+            opacity: 1; 
+            transform: translateY(0) scale(1);
+        }
     }
     
     .header-title {
         color: white;
-        font-size: 2.5rem;
-        font-weight: 700;
+        font-size: 3rem;
+        font-weight: 800;
         margin: 0;
         text-align: center;
+        letter-spacing: -0.02em;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 1;
     }
     
     .header-subtitle {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 1.2rem;
         text-align: center;
-        margin-top: 0.5rem;
+        margin-top: 0.75rem;
+        font-weight: 400;
+        position: relative;
+        z-index: 1;
     }
     
     .demo-badge {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
         color: white;
-        padding: 0.5rem 1rem;
+        padding: 0.6rem 1.5rem;
         border-radius: 2rem;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        font-weight: 600;
         display: inline-block;
-        margin-top: 1rem;
+        margin-top: 1.25rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        z-index: 1;
     }
     
-    /* Chat message styling */
+    /* Premium Chat Messages */
     .user-message {
-        background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
         color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 1rem 1rem 0.2rem 1rem;
-        margin: 1rem 0;
-        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-        animation: slideInRight 0.3s ease-out;
+        padding: 1.25rem 1.75rem;
+        border-radius: 1.5rem 1.5rem 0.5rem 1.5rem;
+        margin: 1.25rem 0;
+        box-shadow: 
+            0 8px 24px rgba(99, 102, 241, 0.35),
+            0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+        animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        font-size: 1.05rem;
+        line-height: 1.6;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .user-message::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
     }
     
     @keyframes slideInRight {
-        from { opacity: 0; transform: translateX(20px); }
-        to { opacity: 1; transform: translateX(0); }
+        from { 
+            opacity: 0; 
+            transform: translateX(30px) scale(0.95);
+        }
+        to { 
+            opacity: 1; 
+            transform: translateX(0) scale(1);
+        }
     }
     
     .assistant-message {
-        background: #1e293b;
-        color: #f1f5f9;
-        padding: 1rem 1.5rem;
-        border-radius: 1rem 1rem 1rem 0.2rem;
-        margin: 1rem 0;
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        color: #f9fafb;
+        padding: 1.25rem 1.75rem;
+        border-radius: 1.5rem 1.5rem 1.5rem 0.5rem;
+        margin: 1.25rem 0;
         border-left: 4px solid #6366f1;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        animation: slideInLeft 0.3s ease-out;
+        box-shadow: 
+            0 8px 24px rgba(0, 0, 0, 0.4),
+            0 0 0 1px rgba(99, 102, 241, 0.2) inset;
+        animation: slideInLeft 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        font-size: 1.05rem;
+        line-height: 1.7;
+        backdrop-filter: blur(10px);
     }
     
     @keyframes slideInLeft {
-        from { opacity: 0; transform: translateX(-20px); }
-        to { opacity: 1; transform: translateX(0); }
+        from { 
+            opacity: 0; 
+            transform: translateX(-30px) scale(0.95);
+        }
+        to { 
+            opacity: 1; 
+            transform: translateX(0) scale(1);
+        }
     }
     
-    /* Stats cards */
+    /* Glassmorphism Stats Cards */
     .stat-card {
-        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-        padding: 1.5rem;
-        border-radius: 0.8rem;
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 1.75rem;
+        border-radius: 1.25rem;
         text-align: center;
-        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        box-shadow: 
+            0 8px 32px rgba(99, 102, 241, 0.2),
+            0 0 0 1px rgba(99, 102, 241, 0.3) inset;
         color: white;
-        transition: transform 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        border: 1px solid rgba(99, 102, 241, 0.2);
     }
     
     .stat-card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 
+            0 16px 48px rgba(99, 102, 241, 0.35),
+            0 0 0 1px rgba(99, 102, 241, 0.5) inset;
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(139, 92, 246, 0.25) 100%);
     }
     
     .stat-number {
-        font-size: 2rem;
-        font-weight: 700;
+        font-size: 2.5rem;
+        font-weight: 800;
         margin: 0;
+        background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
     
     .stat-label {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         opacity: 0.9;
         margin-top: 0.5rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
     }
     
-    /* Button styling */
+    /* Premium Button Styling */
     .stButton>button {
         background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
         color: white;
         border: none;
-        padding: 0.75rem 2rem;
-        border-radius: 0.5rem;
+        padding: 0.875rem 2.5rem;
+        border-radius: 0.75rem;
         font-weight: 600;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        font-size: 1rem;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 
+            0 8px 24px rgba(99, 102, 241, 0.35),
+            0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+        letter-spacing: 0.01em;
     }
     
     .stButton>button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 
+            0 12px 32px rgba(99, 102, 241, 0.45),
+            0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+        background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
     }
     
-    /* Input styling */
-    .stTextInput>div>div>input {
-        background: #1e293b;
-        color: #f1f5f9;
-        border: 2px solid #334155;
-        border-radius: 0.5rem;
-        padding: 0.75rem;
-        transition: border-color 0.3s ease;
+    .stButton>button:active {
+        transform: translateY(-1px) scale(0.98);
     }
     
-    .stTextInput>div>div>input:focus {
+    /* Enhanced Chat Input */
+    .stChatInput>div>div>input {
+        background: rgba(31, 41, 55, 0.8);
+        backdrop-filter: blur(10px);
+        color: #f9fafb;
+        border: 2px solid rgba(99, 102, 241, 0.3);
+        border-radius: 1rem;
+        padding: 1rem 1.25rem;
+        font-size: 1.05rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .stChatInput>div>div>input:focus {
         border-color: #6366f1;
-        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        box-shadow: 
+            0 0 0 4px rgba(99, 102, 241, 0.15),
+            0 8px 24px rgba(0, 0, 0, 0.3);
+        background: rgba(31, 41, 55, 0.95);
     }
     
-    /* Info boxes */
+    /* Glassmorphism Info Boxes */
     .info-box {
-        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-        padding: 1.5rem;
-        border-radius: 0.8rem;
+        background: linear-gradient(135deg, rgba(31, 41, 55, 0.6) 0%, rgba(17, 24, 39, 0.6) 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 1.75rem;
+        border-radius: 1.25rem;
         border-left: 4px solid #6366f1;
-        margin: 1rem 0;
-        color: #f1f5f9;
+        margin: 1.25rem 0;
+        color: #f9fafb;
+        box-shadow: 
+            0 8px 24px rgba(0, 0, 0, 0.3),
+            0 0 0 1px rgba(99, 102, 241, 0.2) inset;
     }
     
-    /* Feature highlight */
-    .feature-box {
-        background: rgba(99, 102, 241, 0.1);
-        border: 1px solid rgba(99, 102, 241, 0.3);
-        padding: 1rem;
-        border-radius: 0.5rem;
-        margin: 0.5rem 0;
-        color: #f1f5f9;
+    .info-box h4 {
+        color: #e0e7ff;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        font-size: 1.15rem;
     }
     
-    /* Scrollbar styling */
+    /* Premium Scrollbar */
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 12px;
     }
     
     ::-webkit-scrollbar-track {
-        background: #1e293b;
+        background: #111827;
+        border-radius: 10px;
     }
     
     ::-webkit-scrollbar-thumb {
-        background: #6366f1;
-        border-radius: 5px;
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        border-radius: 10px;
+        border: 2px solid #111827;
     }
     
     ::-webkit-scrollbar-thumb:hover {
-        background: #8b5cf6;
+        background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
     }
     
-    /* Typing indicator */
-    .typing-indicator {
-        display: inline-block;
-        padding: 1rem;
+    /* Sidebar Styling */
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #0a0e1a 0%, #111827 100%);
+        border-right: 1px solid rgba(99, 102, 241, 0.2);
     }
     
-    .typing-indicator span {
-        height: 10px;
-        width: 10px;
-        background: #6366f1;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 0 2px;
-        animation: typing 1.4s infinite;
+    /* Expander Styling */
+    .streamlit-expanderHeader {
+        background: rgba(99, 102, 241, 0.1);
+        border-radius: 0.75rem;
+        font-weight: 600;
+        color: #e0e7ff;
+        transition: all 0.3s ease;
     }
     
-    .typing-indicator span:nth-child(2) {
-        animation-delay: 0.2s;
+    .streamlit-expanderHeader:hover {
+        background: rgba(99, 102, 241, 0.2);
+        transform: translateX(4px);
     }
     
-    .typing-indicator span:nth-child(3) {
-        animation-delay: 0.4s;
+    /* Smooth transitions for all elements */
+    * {
+        transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     }
     
-    @keyframes typing {
-        0%, 60%, 100% { transform: translateY(0); }
-        30% { transform: translateY(-10px); }
+    /* Glow effect on hover for interactive elements */
+    .stButton>button:hover,
+    .stat-card:hover {
+        filter: drop-shadow(0 0 20px var(--glow));
     }
 </style>
 """, unsafe_allow_html=True)
@@ -267,7 +399,6 @@ def initialize_agent():
                 agent.initialize()
                 st.session_state.agent = agent
                 st.session_state.initialized = True
-                st.success("Agent initialized successfully!")
                 return True
             except Exception as e:
                 st.error(f"Error initializing agent: {str(e)}")
@@ -281,7 +412,6 @@ def display_header():
     <div class="header-container">
         <h1 class="header-title">HR Assistant Agent</h1>
         <p class="header-subtitle">Your AI-powered HR companion for instant answers to policy, benefits, and leave queries</p>
-        <center><span class="demo-badge">Demo Mode - Instant Responses</span></center>
     </div>
     """, unsafe_allow_html=True)
 
@@ -392,30 +522,54 @@ def main():
     if not initialize_agent():
         st.stop()
     
-    # Main chat interface
-    st.markdown("### Chat with HR Assistant")
-    
     # Display chat history
     for chat in st.session_state.chat_history:
         display_chat_message("user", chat["question"])
         display_chat_message("assistant", chat["answer"])
     
     # Chat input
-    question = st.text_input(
+    # Handle quick question clicks from sidebar
+    if 'current_question' in st.session_state:
+        question = st.session_state.current_question
+        del st.session_state.current_question
+        # Process the question immediately
+        with st.spinner("Thinking..."):
+            start_time = time.time()
+            try:
+                result = st.session_state.agent.ask(question)
+                response_time = time.time() - start_time
+                
+                # Update stats
+                st.session_state.total_questions += 1
+                st.session_state.avg_response_time = (
+                    (st.session_state.avg_response_time * (st.session_state.total_questions - 1) + response_time) 
+                    / st.session_state.total_questions
+                )
+                
+                # Add to chat history
+                st.session_state.chat_history.append({
+                    "question": question,
+                    "answer": result["answer"],
+                    "timestamp": datetime.now(),
+                    "response_time": response_time
+                })
+                
+                # Rerun to display new message
+                st.rerun()
+                
+            except Exception as e:
+                st.error(f"Error: {str(e)}")
+    
+    # Chat input section
+    st.markdown("### Chat with HR Assistant")
+    
+    # Use chat_input which automatically clears after submission
+    question = st.chat_input(
         "Ask me anything about HR policies, benefits, leave, or holidays...",
-        key="question_input",
-        placeholder="e.g., How many sick leaves do I have?",
-        value=st.session_state.get('current_question', '')
+        key="question_input"
     )
     
-    if 'current_question' in st.session_state:
-        del st.session_state.current_question
-    
-    col1, col2, col3 = st.columns([3, 1, 1])
-    with col1:
-        ask_button = st.button("Ask Question", use_container_width=True)
-    
-    if ask_button and question:
+    if question:
         # Show typing indicator
         with st.spinner("Thinking..."):
             start_time = time.time()
@@ -444,17 +598,7 @@ def main():
             except Exception as e:
                 st.error(f"Error: {str(e)}")
     
-    # Footer with enhanced info
-    st.markdown("---")
-    st.markdown("""
-    <div style="text-align: center; color: #94a3b8; padding: 1rem;">
-        <p><strong>HR Assistant Agent</strong> - Powered by AI</p>
-        <p style="font-size: 0.9rem;">Built for Rooman AI Agent Development Challenge 2024</p>
-        <p style="font-size: 0.85rem; margin-top: 0.5rem;">
-            Streamlit • LangChain • FAISS • Python
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+
 
 
 if __name__ == "__main__":
